@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudhakaran S - Portfolio</title>
+  <style>
+    :root {
+      --primary: #1e272e;
+      --accent: #0fbcf9;
+      --light: #f5f6fa;
+      --white: #fff;
+      --card-bg: #ffffff;
+      --text-dark: #2f3542;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    nav {
+      background-color: var(--accent);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+    }
+
+    .section {
+      display: none;
+      max-width: 900px;
+      margin: 3rem auto;
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .section ul, .section p {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .section li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-icons i {
+      margin-right: 8px;
+      color: var(--accent);
+    }
+
+    .welcome {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .welcome.active {
+      display: flex;
+    }
+
+    .welcome img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sudhakaran S</h1>
+    <p>Electronics and Communication Engineering | Cybersecurity Enthusiast</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('welcome')">Home</a>
+    <a onclick="showSection('education')">Education</a>
+    <a onclick="showSection('skills')">Skills</a>
+    <a onclick="showSection('projects')">Projects</a>
+    <a onclick="showSection('internship')">Internship</a>
+    <a onclick="showSection('certifications')">Certifications</a>
+    <a onclick="showSection('workshops')">Workshops</a>
+    <a onclick="showSection('awards')">Awards</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <div id="welcome" class="section welcome active">
+    <img src="your-photo.jpg" alt="Profile Photo">
+    <h2>Welcome!</h2>
+    <p>Hello, I'm <strong>Sudhakaran S</strong>, a passionate ECE student specializing in Cybersecurity and Network Security. I love building secure systems, working with hardware, and solving real-world tech challenges.</p>
+    <p>Explore my portfolio by clicking the sections above.</p>
+  </div>
+
+  <div id="education" class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>V.S.B. Engineering College</strong>, Karur – B.E. ECE (2021–Ongoing), CGPA: 7.8</li>
+      <li><strong>Sri Aanoor Vidyalaya Matric Hr Sec School</strong> – 84.6%</li>
+      <li><strong>Bharat Matriculation School, Kangeyam</strong> – 83.6%</li>
+    </ul>
+  </div>
+
+  <div id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, Java, HTML & CSS</li>
+      <li>Cybersecurity: AES, RSA, Firewalls, SIEM</li>
+      <li>Networking: TCP/IP, VLANs, Troubleshooting</li>
+      <li>Soft Skills: Critical Thinking, Time Management</li>
+    </ul>
+  </div>
+
+  <div id="projects" class="section">
+    <h2>Projects</h2>
+    <p><strong>Database Encryption System:</strong><br> Developed a MongoDB-based user registration system using AES, RSA, and bcrypt for secure data handling.</p>
+  </div>
+
+  <div id="internship" class="section">
+    <h2>Internship</h2>
+    <ul>
+      <li><strong>CodeBind Technologies</strong> – Embedded Systems Intern (July 2023)</li>
+      <li>Obstacle Detection using Arduino and sensors – 95% accuracy</li>
+      <li>Traffic Light Controller using IR sensors – 30% traffic flow optimization</li>
+    </ul>
+  </div>
+
+  <div id="certifications" class="section">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Fortinet Certified Associate & Professional</li>
+      <li>Network Essentials – Naan Mudhalvan</li>
+      <li>GUVI: Python, Java, HTML/CSS</li>
+    </ul>
+  </div>
+
+  <div id="workshops" class="section">
+    <h2>Workshops</h2>
+    <ul>
+      <li>Full Stack – Live Wire Institute, Karur (2022)</li>
+      <li>Android – CodeBind Technologies, Coimbatore (2023)</li>
+    </ul>
+  </div>
+
+  <div id="awards" class="section">
+    <h2>Awards</h2>
+    <ul>
+      <li>Rajya Puraskar Award – Scouts and Guides</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact</h2>
+    <ul class="contact-icons">
+      <li><i class="fas fa-envelope"></i> ssudhakaran666@gmail.com</li>
+      <li><i class="fas fa-phone-alt"></i> +91 70921 15744</li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/sudhakaran-s-25712b314">LinkedIn</a></li>
+      <li><i class="fab fa-github"></i><a href="https://github.com/SUDHAKARAN09">GitHub</a></li>
+
+    </ul>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
